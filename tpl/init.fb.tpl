@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="{if isset($fbp_page.og.site_name)}{$fbp_page.og.site_name|@replace:'"':' '}{else}{$GALLERY_TITLE|@replace:'"':' '}{/if}">
 <meta property="og:type" content="{if isset($fbp_page.og.type)}{$fbp_page.og.type}{else}article{/if}">
 <meta property="og:image" content="{if isset($fbp_page.og.image)}{$fbp_page.og.image}{else}{$fbp_page.url_thumbnail_image}{/if}">
-<meta property="og:url" content="{if isset($fbp_page.og.url)}{$fbp_page.og.url}"{else}{$fbp_page.url}{/if}">
+<meta property="og:url" content="{if isset($fbp_page.og.url)}{$fbp_page.og.url}{else}{$fbp_page.url}{/if}">
 {if isset($fbp_page.fb.app_id)}
 <meta property="fb:app_id" content="{$fbp_page.fb.app_id}">
 {/if}
@@ -48,7 +48,7 @@
 </script>
 {else}
 <div id="fb-root"></div>
-<script src="http://connect.facebook.net/{$FACEBOOK_LOCALE}/all.js#appId={$FACEBOOK_APP_ID}&amp;xfbml=1"></script>
+<script src="https://connect.facebook.net/{$FACEBOOK_LOCALE}/all.js#appId={$FACEBOOK_APP_ID}&amp;xfbml=1"></script>
 <script>
   FB.init({ldelim}
     appId  : '{$FACEBOOK_APP_ID}',
