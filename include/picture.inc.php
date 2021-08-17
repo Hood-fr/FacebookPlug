@@ -52,6 +52,7 @@ function fbp_render_element_content($content, $current_picture)
     // define picture FB link
     // Always use full url for FB social plugin
     set_make_full_url();
+//      echo '<pre>'; print_r($conf['fbp']); echo '</pre>';
     if ($conf['fbp']['picture_url_type'] == 'image')
     {
       $page['fbp']['url'] = get_element_url($current_picture);
@@ -62,6 +63,9 @@ function fbp_render_element_content($content, $current_picture)
     }
     $page['fbp']['url_image'] = get_element_url($current_picture);
     $page['fbp']['url_thumbnail_image'] = DerivativeImage::thumb_url($current_picture);
+    $page['fbp']['url_square_image'] = DerivativeImage::url(IMG_SQUARE, $current_picture);
+    $page['fbp']['url_medium_image'] = DerivativeImage::url(IMG_MEDIUM, $current_picture);
+//    echo '<pre>'; print_r($page['fbp']); echo '</pre>';
     unset_make_full_url();
 
 

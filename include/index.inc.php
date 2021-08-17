@@ -68,6 +68,8 @@ function fbp_loc_begin_index()
 
 function fbp_loc_begin_index_category_thumbnails($categories)
 {
+    
+ // echo '<pre>'; print_r($categories); echo '</pre>';
   global $page;
 
   $C = count($categories);
@@ -89,6 +91,8 @@ WHERE id = '.$category['representative_picture_id'].'
         set_make_full_url();
         $page['fbp']['url_image'] = get_element_url($row);
         $page['fbp']['url_thumbnail_image'] = DerivativeImage::thumb_url($row);
+        $page['fbp']['url_square_image'] = DerivativeImage::url(IMG_SQUARE, $row);
+        $page['fbp']['url_medium_image'] = DerivativeImage::url(IMG_MEDIUM, $row);
         unset_make_full_url();
       }
     }
@@ -97,23 +101,29 @@ WHERE id = '.$category['representative_picture_id'].'
 
 function fbp_loc_begin_index_thumbnails($pictures)
 {
+//  echo '<pre>'; print_r($pictures); echo '</pre>';
   global $page;
 
   if (isset($page['category']['representative_picture_id']))
   {
+ // echo '<pre>'; print_r($page['category']['representative_picture_id']); echo '</pre>';
     fbp_loc_begin_index_category_thumbnails(array($page['category']));
   }
   else
   {
     $C = count($pictures);
+   //echo $C;
     if ($C > 0)
     {
       include_once(PHPWG_ROOT_PATH.'include/functions_picture.inc.php');
       $picture = reset($pictures);
       $picture = $pictures[rand(0, $C-1)];
+      //echo '<pre>'; print_r($picture); echo '</pre>';
       set_make_full_url();
       $page['fbp']['url_image'] = get_element_url($picture);
       $page['fbp']['url_thumbnail_image'] = DerivativeImage::thumb_url($picture);
+      $page['fbp']['url_square_image'] = DerivativeImage::url(IMG_SQUARE, $picture);
+      $page['fbp']['url_medium_image'] = DerivativeImage::url(IMG_MEDIUM, $picture);
       unset_make_full_url();
     }
   }
