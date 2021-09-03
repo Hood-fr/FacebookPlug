@@ -19,10 +19,10 @@
 {/if}
 <meta property="og:site_name" content="{if isset($fbp_page.og.site_name)}{$fbp_page.og.site_name|@replace:'"':' '}{else}{$GALLERY_TITLE|@replace:'"':' '}{/if}">
 <meta property="og:type" content="{if isset($fbp_page.og.type)}{$fbp_page.og.type}{else}website{/if}">
-<meta property="og:image" content="{if isset($fbp_page.og.image)}{$fbp_page.og.image}{else}{$fbp_page.url_square_image}{/if}">
-<meta property="og:image:url" content="{if isset($fbp_page.og.image.url)}{$fbp_page.og.image}{else}{$fbp_page.url_square_image}{/if}">
-<meta property="og:image:width" content="230">
-<meta property="og:image:height" content="230">
+<meta property="og:image" content="{if isset($fbp_page.og.image)}{$fbp_page.og.image}{else}{$fbp_page.url_xs_image}{/if}">
+<meta property="og:image:url" content="{if isset($fbp_page.og.image.url)}{$fbp_page.og.image}{else}{$fbp_page.url_xs_image}{/if}">
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
 <meta property="og:url" content="{if isset($fbp_page.og.url)}{$fbp_page.og.url}{else}{$fbp_page.url}{/if}">
 {if isset({$FACEBOOK_APP_ID})}
 <meta property="fb:app_id" content="{$FACEBOOK_APP_ID}">

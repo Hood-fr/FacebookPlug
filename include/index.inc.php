@@ -92,7 +92,7 @@ WHERE id = '.$category['representative_picture_id'].'
         $page['fbp']['url_image'] = get_element_url($row);
         $page['fbp']['url_thumbnail_image'] = DerivativeImage::thumb_url($row);
         $page['fbp']['url_square_image'] = DerivativeImage::url(IMG_SQUARE, $row);
-        $page['fbp']['url_medium_image'] = DerivativeImage::url(IMG_MEDIUM, $row);
+        $page['fbp']['url_xs_image'] = DerivativeImage::url(IMG_XSMALL, $row);
         unset_make_full_url();
       }
     }
@@ -123,7 +123,7 @@ function fbp_loc_begin_index_thumbnails($pictures)
       $page['fbp']['url_image'] = get_element_url($picture);
       $page['fbp']['url_thumbnail_image'] = DerivativeImage::thumb_url($picture);
       $page['fbp']['url_square_image'] = DerivativeImage::url(IMG_SQUARE, $picture);
-      $page['fbp']['url_medium_image'] = DerivativeImage::url(IMG_MEDIUM, $picture);
+      $page['fbp']['url_xs_image'] = DerivativeImage::url(IMG_XSMALL, $picture);
       unset_make_full_url();
     }
   }

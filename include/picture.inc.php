@@ -64,7 +64,7 @@ function fbp_render_element_content($content, $current_picture)
     $page['fbp']['url_image'] = get_element_url($current_picture);
     $page['fbp']['url_thumbnail_image'] = DerivativeImage::thumb_url($current_picture);
     $page['fbp']['url_square_image'] = DerivativeImage::url(IMG_SQUARE, $current_picture);
-    $page['fbp']['url_medium_image'] = DerivativeImage::url(IMG_MEDIUM, $current_picture);
+    $page['fbp']['url_xs_image'] = DerivativeImage::url(IMG_XSMALL, $current_picture);
 //    echo '<pre>'; print_r($page['fbp']); echo '</pre>';
     unset_make_full_url();
 
