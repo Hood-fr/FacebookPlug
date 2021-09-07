@@ -39,7 +39,8 @@
       appId  : '{$FACEBOOK_APP_ID}',
       status : true, // check login status 
       cookie : true, // enable cookies to allow the server to access the session 
-      xfbml  : true  // parse XFBML 
+      xfbml  : true,  // parse XFBML
+      version: 'v11.0'
     {rdelim}); 
   {rdelim}; 
   (function() {ldelim}
@@ -52,13 +53,14 @@
 {else}
 <div id="fb-root"></div>
 <!--<script src="https://connect.facebook.net/{$FACEBOOK_LOCALE}/all.js#appId={$FACEBOOK_APP_ID}&amp;xfbml=1"></script>-->
-<script src="https://connect.facebook.net/{$FACEBOOK_LOCALE}/sdk.js&amp;xfbml=1"></script>
+<script src="https://connect.facebook.net/{$FACEBOOK_LOCALE}/sdk.js"></script>
 <script>
   FB.init({ldelim}
     appId  : '{$FACEBOOK_APP_ID}',
     status : true, // check login status
     cookie : true, // enable cookies to allow the server to access the session
-    xfbml  : true  // parse XFBML
+    xfbml  : true,  // parse XFBML      version: 'v11.0'
+    version: 'v11.0'
  {rdelim});
 </script>
 {/if}
